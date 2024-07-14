@@ -8,9 +8,9 @@ describe('User Signup and Login', () => {
   it('should successfully sign up a new user', () => {
     // Visit the Signup page
     cy.visit(url);
-    cy.get('.css-m7nve9 > .MuiButton-contained').click();
-    cy.get('[data-cy="auth-email-input"]').type(uniqueEmail,{ parseSpecialCharSequences: false });
-    cy.get('button[class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1cbp9qz"]').click();
+    cy.get('.css-m7nve9 > .MuiButton-contained').click(); //clicking on signup
+    cy.get('[data-cy="auth-email-input"]').type(uniqueEmail,{ parseSpecialCharSequences: false }); //entering email id
+    cy.get('button[class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1cbp9qz"]').click(); //submit button
     cy.get('#mui-3').type(uniquePassword,{ parseSpecialCharSequences: false });
     cy.get('#mui-4').type(uniquePassword,{ parseSpecialCharSequences: false });
     cy.get('[class*=css-1cbp9qz]').click();
@@ -18,7 +18,7 @@ describe('User Signup and Login', () => {
     cy.get(`input[aria-label="Please enter OTP character ${index + 1}"]`).type(digit);
     
   });
-  
+
     cy.get('[class*="css-1cbp9qz"]').click();
     cy.wait(3000);
     cy.get("input[placeholder='choose location']").click().clear().type("India",{delay:200});
