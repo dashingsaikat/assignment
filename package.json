@@ -1,0 +1,29 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.12.41",
+    "babel-plugin-istanbul": "^7.0.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "istanbul-lib-coverage": "^3.2.2"
+  },
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "charts": true,
+    "reportPageTitle": "Test Report",
+    "embeddedScreenshots": true,
+    "inlineAssets": true,
+    "saveAllAttempts": false
+  }
+}
